@@ -24,7 +24,7 @@ class AlunoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //aqui coloca as regras
         ];
     }
 }
