@@ -26,9 +26,10 @@ class AlunoController extends Controller
     {
         $dados = Aluno::where('id_aluno', $id)->get();
         $dados = $dados[0];
+        $supervisores = Supervisor:: all();
 //            print_r($dados);
 //            die;
-        return view('aluno.form', compact('dados'));
+        return view('aluno.form', ['dados'=>$dados, 'supervisores' =>$supervisores]);
     }
 
     public function salvar(AlunoRequest $dados)
