@@ -5,7 +5,7 @@
  {{--* Time: 10:06--}}
  {{--*/--}}
 @extends('templates/principal')
-
+@section('titulo', 'Listagem de Alunos')
 @section('conteudo')
 
     <div class="row">
