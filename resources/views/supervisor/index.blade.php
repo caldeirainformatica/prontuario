@@ -13,7 +13,7 @@
 						<thead>
 						<tr>
 							<th>Ação</th>
-							<th>Codigo</th>
+							<th>CRP</th>
 							<th>Nome</th>
 							<th>Telefone</th>
 						</tr>
@@ -30,7 +30,7 @@
 												class="material-icons left red-text">delete</i></a>
 								</td>
 								{{--supervisor/deletar/{{$dado['id_supervisor']}}--}}
-								<td>{{$dado['nu_codigo']}}</td>
+								<td>{{$dado['nu_crp']}}</td>
 								<td>{{$dado['tx_nome']}}</td>
 								<td>{{$dado['nu_fone']}}</td>
 							</tr>
@@ -39,7 +39,7 @@
 					</table>
 				</div>
 				<div class="right-align">
-					<a class="btn-floating btn-large waves-effect waves-light" href="{{route('supervisor.form')}}"><i
+					<a class="btn-floating btn-large waves-effect waves-light red" href="{{route('supervisor.form')}}"><i
 								class="material-icons">add</i></a>
 				</div>
 			</div>

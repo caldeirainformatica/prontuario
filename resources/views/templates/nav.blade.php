@@ -17,12 +17,14 @@
 			<li><a href="{{route('aluno.index')}}">Aluno</a></li>
 			<li><a href="{{route('supervisor.index')}}">Supervisor</a></li>
 			<li><a href="{{route('triagem.index')}}">Triagem</a></li>
+			<li><a href="{{route('paciente.index')}}">Paciente</a></li>
 
 		</ul>
 		<ul class="side-nav" id="mobile-demo">
 			<li><a href="{{route('aluno.index')}}">Aluno</a></li>
 			<li><a href="{{route('supervisor.index')}}">Supervisor</a></li>
 			<li><a href="{{route('triagem.index')}}">Triagem</a></li>
+			<li><a href="{{route('paciente.index')}}">Paciente</a></li>
 
 		</ul>
 	</div>
