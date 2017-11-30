@@ -1,5 +1,5 @@
 @extends('templates/principal')
-
+@section('titulo', 'Listagem de Alunos')
 @section('conteudo')
 
     <div class="row">
@@ -25,7 +25,6 @@
                                 <td>
                                     <a class="waves-effect waves-light" href="aluno/alterar/{{$dado['id_aluno']}}"><i
                                                 class="material-icons left">mode_edit</i></a>
-
                                     <a href="#" onclick="deletar({{$dado['id_aluno']}})"><i
                                                 class="material-icons left red-text">delete</i></a>
                                 </td>
@@ -48,16 +47,34 @@
 
     <script>
         function deletar(id) {
-            console.log(id)
-            swal({
-                title: 'Tem Certeza?',
-                text: "Aluno irá ser apagado!",
-                type: 'warning',
-                showCancelButton: true
-            }).then(function () {
-                window.open('/aluno/deletar/' + id, '_self');
-            })
 
+            console.log(id);
+            swal({
+                title: 'Tem Certeza que deseja apagar esse Aluno? (' + id + ")",
+                text: "O Aluno irá ser apagado!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#00c853', // COR DO BOTÃO DE CONFIRMAR
+                confirmButtonText: 'Sim',
+                cancelButtonColor: '#b71c1c',  // COR DO BOTÃO DE CANCELAR
+                cancelButtonText: 'Não'
+            }).then(function (result) {
+                if (result.value) {
+                    window.open('/aluno/deletar/' + id, '_self');
+                    swal(
+                        'Deletado!',
+                        'Apagado com sucesso !',
+                        'success'
+                    )
+                } else if (result.dismiss === 'cancel') {
+                    swal(
+                        'Operação Cancelada',
+                        'Cadastro salvo com sucesso',
+                        'error'
+                    )
+                }
+            })
         }
     </script>
+
 @endsection

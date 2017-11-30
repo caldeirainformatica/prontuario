@@ -22,6 +22,7 @@ class AlunoController extends Controller
         return view('aluno.form', compact('supervisores'));
 
     }
+
     public function alterar($id)
     {
         $dados = Aluno::where('id_aluno', $id)->get();
@@ -29,7 +30,7 @@ class AlunoController extends Controller
         $supervisores = Supervisor:: all();
 //            print_r($dados);
 //            die;
-        return view('aluno.form', ['dados'=>$dados, 'supervisores' =>$supervisores]);
+        return view('aluno.form', ['dados' => $dados, 'supervisores' => $supervisores]);
     }
 
     public function salvar(AlunoRequest $dados)
@@ -48,4 +49,6 @@ class AlunoController extends Controller
         Aluno::where('id_aluno', $dados)->delete();
         return redirect(route('aluno.index'));
     }
+
+    
 }

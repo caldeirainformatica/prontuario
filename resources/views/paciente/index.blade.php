@@ -45,11 +45,13 @@
                                 @foreach($dados as $dado)
 
                                     <tr>
-                                        <td><a class="waves-effect waves-light" href="paciente/alterar/{{$dado['id_paciente']}}"><i
+                                        <td><a class="waves-effect waves-light"
+                                               href="paciente/alterar/{{$dado['id_paciente']}}"><i
                                                         class="material-icons left">mode_edit</i></a>
 
                                             <a href="paciente/deletar/{{$dado['id_paciente']}}"><i
-                                                        class="material-icons left red-text" onclick="return confirm('Tem certeza que deseja deletar?')">delete</i></a>
+                                                        class="material-icons left red-text"
+                                                        onclick="return confirm('Tem certeza que deseja deletar?')">delete</i></a>
 
                                         </td>
                                         <td>{{$dado['id_paciente']}}</td>
@@ -81,7 +83,7 @@
                                         {{--<td>{{ $dado['updated_at']}}</td>--}}
 
                                     </tr>
-                                @endforeach;
+                                @endforeach
 
                             </table>
                         </div>
@@ -99,25 +101,26 @@
         </div>
     </div>
     <script>
-    function EventAlert(){
-    swal({
-    title: "Deseja deletar?",
-    text: "Não podera recuperar esse arquivo novamente!",
-    type: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#DD6B55",
-    confirmButtonText: "Sim, apagar!",
-    cancelButtonText: "Não, cancele por favor!",
-    closeOnConfirm: false,
-    closeOnCancel: false
-    },
-    function(isConfirm){
-    if (isConfirm) {
-    swal("Deletado!", "Supervisor deletado.", "success");
-    } else {
-    swal("Cancelled", "Cancelado :)", "error");
-    }
-    });
-    }
+        function EventAlert() {
+            swal({
+                    title: "Deseja deletar?",
+                    text: "Não poderá recuperar esse arquivo novamente!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sim, apagar!",
+                    cancelButtonText: "Não, cancele por favor!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Deletado!", "Supervisor deletado.", "success");
+                    } else {
+                        swal("Cancelled", "Cancelado :)", "error");
+                    }
+                });
+        }
     </script>
+
 @endsection

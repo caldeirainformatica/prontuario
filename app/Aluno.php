@@ -10,7 +10,7 @@ class Aluno extends Model
     public $timestamps = true;
     protected $primaryKey = 'id_aluno';
     protected $fillable = ['nu_codigo', 'tx_nome', 'nu_cep', 'tx_endereco', 'nu_numero', 'tx_bairro', 'tx_cidade',
-                            'tx_uf', 'nu_fone', 'nu_fone2', 'tx_observacao', 'fk_supervisor'];
+        'tx_uf', 'nu_fone', 'nu_fone2', 'tx_observacao', 'fk_supervisor'];
 
     public function salvar($dados)
     {

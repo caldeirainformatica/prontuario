@@ -57,11 +57,16 @@ class PacienteController extends Controller
         Paciente::where('id_paciente', $dados)->delete();
         return redirect(route('paciente.index'));
     }
+
     public function aluno($id)
     {
-        $aluno = Aluno::where('fk_supervisor',$id)->get()->first();
-        return  $aluno;
+        $aluno = Aluno::where('fk_supervisor', $id)->get()->first();
+        return $aluno;
     }
 
+    public function test()
+    {
+        return view('paciente.test');
+    }
 
 }

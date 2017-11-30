@@ -1,9 +1,3 @@
-{{--/**--}}
- {{--* Created by PhpStorm.--}}
- {{--* User: Antonio RS-PC--}}
- {{--* Date: 11/07/2017--}}
- {{--* Time: 10:06--}}
- {{--*/--}}
 @extends('templates/principal')
 @section('titulo', 'Listagem de Alunos')
 @section('conteudo')

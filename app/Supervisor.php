@@ -10,7 +10,7 @@ class Supervisor extends Model
     public $timestamps = true;
     protected $primaryKey = 'id_supervisor';
     protected $fillable = ['nu_crp', 'tx_nome', 'nu_cep', 'tx_endereco', 'nu_numero', 'tx_bairro', 'tx_cidade',
-        'tx_uf', 'nu_fone', 'nu_fone2','tx_email','nu_matricula', 'tx_observacao', 'dt_nascimento', 'created_at', 'updated_at'];
+        'tx_uf', 'nu_fone', 'nu_fone2', 'tx_email', 'nu_matricula', 'tx_observacao', 'dt_nascimento', 'created_at', 'updated_at'];
 
     public function salvar($dados)
     {
