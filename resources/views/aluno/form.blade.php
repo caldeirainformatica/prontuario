@@ -51,7 +51,7 @@
                             else {
                                 //CEP pesquisado não foi encontrado.
                                 limpa_formulário_cep();
-                                swal("CEP não encontrado!", '', 'error');
+                                swal("CEP não encontrado !", '', 'error');
                             }
                         });
                     } //end if.

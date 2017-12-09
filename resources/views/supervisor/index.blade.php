@@ -9,7 +9,7 @@
                     <div>
                         <h4 class="grey-text" align="center">Lista de Supervisores</h4>
                     </div>
-                    <table class="striped bordered">
+                    <table class="highlight bordered responsive-table">
                         <thead>
                         <tr>
                             <th>Ação</th>
@@ -21,14 +21,13 @@
                         <tbody>
                         @foreach($dados as $dado)
                             <tr>
-                                <td>
-
-                                    <a class="waves-effect waves-light"
+                                <td><a class="waves-effect waves-light"
                                        href="supervisor/alterar/{{$dado['id_supervisor']}}"><i
                                                 class="material-icons left">mode_edit</i></a>
                                     <!-- Para funcionar o Sweet Alert-->
                                     <a href="#" onclick="deletar({{$dado['id_supervisor']}})"><i
                                                 class="material-icons left red-text">delete</i></a>
+                                </td>
                                 <td>{{$dado['nu_crp']}}</td>
                                 <td>{{$dado['tx_nome']}}</td>
                                 <td>{{$dado['nu_fone']}}</td>
@@ -51,9 +50,9 @@
 
             console.log(id);
             swal({
-                title: 'Tem Certeza que deseja apagar esse Supervisor? (' + id + ")",
-                text: "O Supervisor irá ser apagado!",
-                type: 'warning',
+                title: 'Tem Certeza?', // TÍTULO DE AVISO
+                text: 'O Supervisor será apagado ! (' + id + ')',  // SUBTÍTULO DE AVISO
+                type: 'warning',   // TIPO DE AVISO (ÍCONE)
                 showCancelButton: true,
                 confirmButtonColor: '#00c853', // COR DO BOTÃO DE CONFIRMAR
                 confirmButtonText: 'Sim',
@@ -63,62 +62,15 @@
                 if (result.value) {
                     window.open('/supervisor/deletar/' + id, '_self');
                     swal(
-                        'Deletado!',
-                        'Apagado com sucesso !',
-                        'success'
+                        'Deletado!', 'Supervisor deletado !', 'success'
                     )
                 } else if (result.dismiss === 'cancel') {
                     swal(
-                        'Operação Cancelada',
-                        'Cadastro salvo com sucesso',
-                        'error'
+                        'Operação Cancelada', '', 'error'
                     )
                 }
             })
         }
     </script>
 
-    <!--
-               s function EventAlert(mensagem, id) {
-          swal({
-        title: mensagem,
-        text: "Não podera recuperar o registro numero" + id,
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Sim, apagar!",
-        cancelButtonText: "Não, cancele por favor!",
-        closeOnConfirm: false,
-        closeOnCancel: false,
-        }).then(function () {
-        swal("Deletado!", "Supervisor deletado.", "success" + id);
-        }, function () {
-        swal("Cancelled", "Cancelado :)", "error" + id);
-
-        });
-
-        swal({
-        title: mensagem,
-        text: "Não podera recuperar o registro numero" + id,
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Sim, apagar!",
-        cancelButtonText: "Não, cancele por favor!",
-        closeOnConfirm: false,
-        closeOnCancel: true
-        },
-        function (isConfirm) {
-        if (isConfirm) {
-
-
-        $.get('/supervisor/deletar/' + id, function (data) {
-        console.log(data.data)
-        swal("Deletado!", "Supervisor " + id + " deletado.", "success");
-        })
-
-        }
-        });
-        }
-        </script>  -->
 @endsection

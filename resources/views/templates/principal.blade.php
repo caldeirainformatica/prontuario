@@ -16,7 +16,7 @@
 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.maskedinput.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/sweetalert.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/sweetalert.min.js')}}"></script> <!-- Plugin do Sweet Alert -->
 @include('templates/nav')
 @yield('conteudo')
 

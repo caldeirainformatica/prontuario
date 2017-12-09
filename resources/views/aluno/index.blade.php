@@ -9,7 +9,7 @@
                     <div>
                         <h4 class="grey-text" align="center">Lista de Médicos/Alunos</h4>
                     </div>
-                    <table class="striped bordered">
+                    <table class="highlight bordered responsive-table">
                         <thead>
                         <tr>
                             <th>Ação</th>

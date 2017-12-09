@@ -1,5 +1,5 @@
 @extends('templates/principal')
-@section('titulo', 'Cadastro de Aluno')
+@section('titulo', 'Cadastro de Supervisor')
 
 @section('conteudo')
 
@@ -51,14 +51,14 @@
                             else {
                                 //CEP pesquisado não foi encontrado.
                                 limpa_formulário_cep();
-                                alert("CEP não encontrado.");
+                                swal("CEP não encontrado !", '', 'error');
                             }
                         });
                     } //end if.
                     else {
                         //cep é inválido.
                         limpa_formulário_cep();
-                        alert("Formato de CEP inválido.");
+                        swal("Formato de CEP inválido !");
                     }
                 } //end if.
                 else {

@@ -1,14 +1,7 @@
-{{--///**--}}
-{{--// * Created by PhpStorm.--}}
-{{--// * User: Antonio RS-PC--}}
-{{--// * Date: 06/07/2017--}}
-{{--// * Time: 11:52--}}
-{{--// */--}}
-
 @extends('templates/principal')
-@section('titulo', 'Cadastro de Aluno')
-
+@section('titulo', 'Patrimônio')
 @section('conteudo')
+
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
@@ -23,12 +16,11 @@
                                 <input type="number" name="id_supervisor" id="id_supervisor"
                                        value="{{$dados['id_patrimonio'] or null}}" hidden>
                             </div>
-                            <div class="input-field col s12">
-                                <input id="tx_descricao" name="tx_descricao" type="text" class="validate" required
+                            <div class="input-field col s12 l12">
+                                <input id="tx_descricao" name="tx_descricao" class="validate" required
                                        value="{{$dados['tx_descricao'] or null}}">
                                 <label for="tx_descricao">Patrimonio</label>
                             </div>
-
                             <input type="submit" value="Salvar" id="salvar" name="salvar" onclick="EventAlert()"
                                    class="btn btn-success">
                             <a href="{{route('patrimonio.index')}}" class="btn red">Cancelar</a>
@@ -38,6 +30,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection
