@@ -1,20 +1,12 @@
-{{--///**--}}
-{{--// * Created by PhpStorm.--}}
-{{--// * User: Antonio RS-PC--}}
-{{--// * Date: 06/07/2017--}}
-{{--// * Time: 11:52--}}
-{{--// */--}}
-
 @extends('templates/principal')
 @section('titulo', 'Cadastro de Aluno')
-
 @section('conteudo')
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Gasto com saude</h4>
+                    <div class="grey-text center-align">
+                        <h4>Gasto com saude</h4>
                     </div>
                     <form method="post" action={{route('gastoSaude.salvar')}}>
                         {{ csrf_field() }}
@@ -45,10 +37,10 @@
             </div>
         </div>
     </div>
-<script>
-    $(document).ready(function () {
-    $('select').material_select();
-    });
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
 
     </script>
 

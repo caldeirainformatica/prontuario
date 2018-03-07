@@ -46,7 +46,6 @@
                                 $("#tx_bairro").val(dados.bairro);
                                 $("#tx_cidade").val(dados.localidade);
                                 $("#tx_uf").val(dados.uf);
-                                //      $("#ibge").val(dados.ibge);
                             } //end if.
                             else {
                                 //CEP pesquisado não foi encontrado.
@@ -68,20 +67,17 @@
             });
         });
     </script>
-    <style>
-        p.uppercase {
-            text-transform: uppercase;
-        }
-    </style>
+
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Cadastro de Supervisor</h4>
+                    <div class="grey-text center-align">
+                        <h4>Cadastro de Supervisor</h4>
                     </div>
                     <form method="post" action={{route('supervisor.salvar')}}>
-                        {{ csrf_field() }}
+                    {{ csrf_field() }}
+                    <!-- TOKEN DO LARAVEL-->
                         <div class="row">
                             <div id="oculto">
                                 <input type="number" name="id_supervisor" id="id_supervisor"
@@ -119,12 +115,12 @@
                             </div>
                             <div class="input-field col s9 l4">
                                 <input type="text" id="tx_bairro" name="tx_bairro" class="validate" required
-                                       value="{{$dados['tx_bairro'] or null}}">
+                                       maxlength="30" value="{{$dados['tx_bairro'] or null}}">
                                 <label for="tx_bairro">Bairro</label>
                             </div>
                             <div class="input-field col s8 l3">
                                 <input type="text" id="tx_cidade" name="tx_cidade" class="validate" required
-                                       value="{{$dados['tx_cidade'] or null}}">
+                                       maxlength="20" value="{{$dados['tx_cidade'] or null}}">
                                 <label for="tx_cidade">Cidade</label>
                             </div>
                             <div class="input-field col s4 l1">
@@ -147,11 +143,12 @@
                                        value="{{$dados['tx_email'] or null}}">
                                 <label for="tx_email">E-mail</label>
                             </div>
+                            <div class="col s12 right-align">
+                                <input type="submit" value="Salvar" id="salvar" name="salvar" onclick="EventAlert()"
+                                       class="btn btn-success">
+                                <a href="{{route('supervisor.index')}}" class="btn red">Cancelar</a>
+                            </div>
                         </div>
-
-                        <input type="submit" value="Salvar" id="salvar" name="salvar" onclick="EventAlert()"
-                               class="btn btn-success">
-                        <a href="{{route('supervisor.index')}}" class="btn red">Cancelar</a>
                     </form>
                 </div>
             </div>

@@ -1,23 +1,17 @@
-{{--/**--}}
- {{--* Created by PhpStorm.--}}
- {{--* User: Antonio RS-PC--}}
- {{--* Date: 16/07/2017--}}
- {{--* Time: 14:43--}}
- {{--*/--}}
 <html>
 <head>
     <title>@yield('titulo')</title>
-    <!--Import Google Icon Font-->
+    <!--Import Google Icon Font / Importação de Fontes do Google Ìcones -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
+    <!--Import materialize.css / Importação do Materialize.css -->
     <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.min.css')}}" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="{{asset('css/sweetalert.css')}}">
 
-    <!--Let browser know website is optimized for mobile-->
+    <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body class="blue-grey lighten-5">
-<!--Import jQuery before materialize.js-->
+<!--Import jQuery before materialize.js / Importação do JQuery antes do Materialize.css -->
 <script type="text/javascript" src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.maskedinput.js')}}"></script>

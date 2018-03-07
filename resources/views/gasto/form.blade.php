@@ -1,23 +1,16 @@
-{{--///**--}}
-{{--// * Created by PhpStorm.--}}
-{{--// * User: Antonio RS-PC--}}
-{{--// * Date: 06/07/2017--}}
-{{--// * Time: 11:52--}}
-{{--// */--}}
-
 @extends('templates/principal')
-@section('titulo', 'Cadastro de Aluno')
-
+@section('titulo', 'Gasto Saúde')
 @section('conteudo')
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Gasto com saude</h4>
+                    <div class="grey-text center-align">
+                        <h4>Gasto com saude</h4>
                     </div>
                     <form method="post" action={{route('gasto.salvar')}}>
-                        {{ csrf_field() }}
+                    {{ csrf_field() }}
+                    <!--  TOKEN LARAVEL -->
                         <div class="row">
                             <div id="oculto">
                                 <input type="number" name="id_supervisor" id="id_supervisor"
@@ -28,15 +21,14 @@
                                        value="{{$dados['tx_nome'] or null}}">
                                 <label for="tx_nome">Gasto</label>
                             </div>
-
                             <input type="submit" value="Salvar" id="salvar" name="salvar" onclick="EventAlert()"
                                    class="btn btn-success">
                             <a href="{{route('gasto.index')}}" class="btn red">Cancelar</a>
-                        </div></form>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
 
 @endsection

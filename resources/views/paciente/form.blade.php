@@ -72,11 +72,12 @@
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Cadastro de paciente</h4>
+                    <div class="grey-text center-align">
+                        <h4>Cadastro de paciente</h4>
                     </div>
                     <form method="post" action={{route('paciente.salvar')}}>
-                        {{ csrf_field() }}
+                    {{ csrf_field() }}
+                    <!-- TOKEN DO LARAVEL -->
                         <div id="oculto">
                             <input type="number" name="id_supervisor" id="id_supervisor"
                                    value="{{$dados['id_supervisor'] or null}}" hidden>
@@ -237,11 +238,13 @@
                             </select>
                             <label for="aluno">Aluno</label>
                         </div>
-                        <!--   <a href="#" onclick="Novo"><i
-                                       class="material-icons left red-text">delete</i></a> -->
-                        <input type="submit" value="Salvar" id="Salvar" align="" name="salvar" onclick="Novo"
-                               class="btn btn-success">
-                        <a href="{{route('paciente.index')}}" class="btn red">Cancelar</a>
+                        <div class="right-align">
+                            <!--   <a href="#" onclick="Novo"><i
+                                           class="material-icons left red-text">delete</i></a> -->
+                            <input type="submit" value="Salvar" id="Salvar" align="" name="salvar" onclick="Novo"
+                                   class="btn btn-success">
+                            <a href="{{route('paciente.index')}}" class="btn red">Cancelar</a>
+                        </div>
                     </form>
                 </div>
             </div>

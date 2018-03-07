@@ -48,25 +48,27 @@
 
         function deletar(id) {
 
-            console.log(id);
+            console.log();
             swal({
-                title: 'Tem Certeza?', // TÍTULO DE AVISO
-                text: 'O Supervisor será apagado ! (' + id + ')',  // SUBTÍTULO DE AVISO
-                type: 'warning',   // TIPO DE AVISO (ÍCONE)
+                title: 'Tem Certeza? ', // TÍTULO DE AVISO
+                text: 'O Supervisor será apagado ! ',  // SUBTÍTULO DE AVISO
+                type: 'warning',   // TIPO DE ÍCONE DE AVISO
                 showCancelButton: true,
-                confirmButtonColor: '#00c853', // COR DO BOTÃO DE CONFIRMAR
-                confirmButtonText: 'Sim',
-                cancelButtonColor: '#b71c1c',  // COR DO BOTÃO DE CANCELAR
-                cancelButtonText: 'Não'
+                confirmButtonColor: '#0c3', // COR DO BOTÃO DE CONFIRMAR
+                confirmButtonText: 'Sim',   // TÍTULO DO BOTÃO DE CONFIRMAR
+                cancelButtonColor: '#b11',  // COR DO BOTÃO DE CANCELAR
+                cancelButtonText: 'Não'     // TÍTULO DO BOTÃO DE CANCELAR
             }).then(function (result) {
                 if (result.value) {
                     window.open('/supervisor/deletar/' + id, '_self');
                     swal(
-                        'Deletado!', 'Supervisor deletado !', 'success'
+                        'Sucesso !', 'Supervisor deletado !', 'success'
+                        // #simbolo de exclusão    #mensagem      #tipo de ícone
                     )
                 } else if (result.dismiss === 'cancel') {
                     swal(
                         'Operação Cancelada', '', 'error'
+                        // #título   #subtítulo  # ícone
                     )
                 }
             })

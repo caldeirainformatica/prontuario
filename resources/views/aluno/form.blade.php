@@ -72,8 +72,8 @@
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Cadastro de Aluno</h4>
+                    <div class="grey-text center-align">
+                        <h4>Cadastro de Aluno</h4>
                     </div>
                     <form method="post" action={{route('aluno.salvar')}}>
                         {{ csrf_field() }}
@@ -90,7 +90,7 @@
                             <div class="input-field col s5 l4">
                                 <input type="text" id="nu_codigo" name="nu_codigo" class="validate" required
                                        value="{{$dados['nu_codigo'] or null}}" maxlength="4">
-                                <label for="nu_codigo">Codigo</label>
+                                <label for="nu_codigo">Código</label>
                             </div>
                             <div class="input-field col s7 l3">
                                 <input type="text" maxlength="9" id="nu_cep" name="nu_cep" class="validate" required
@@ -109,12 +109,12 @@
                             </div>
                             <div class="input-field col s8 l5">
                                 <input type="text" id="tx_bairro" name="tx_bairro" class="validate" required
-                                       value="{{$dados['tx_bairro'] or null}}">
+                                       maxlength="20" value="{{$dados['tx_bairro'] or null}}">
                                 <label for="tx_bairro">Bairro</label>
                             </div>
                             <div class="input-field col s8 l5">
                                 <input type="text" id="tx_cidade" name="tx_cidade" class="validate" required
-                                       value="{{$dados['tx_cidade'] or null}}">
+                                       maxlength="30" value="{{$dados['tx_cidade'] or null}}">
                                 <label for="tx_cidade">Cidade</label>
                             </div>
                             <div class="input-field col s4 l2">

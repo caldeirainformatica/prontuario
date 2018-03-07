@@ -2,13 +2,12 @@
 @section('titulo', 'Listagem de Pacientes')
 @section('conteudo')
 
-
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Lista de Pacientes</h4>
+                    <div class="grey-text center-align">
+                        <h4>Lista de Pacientes</h4>
                     </div>
                     <table class="highlight bordered responsive-table">
                         <thead>
@@ -59,28 +58,24 @@
                        href="{{route('paciente.form')}}"><i
                                 class="material-icons">add</i></a>
                 </div>
-                <div class="card-action">
-                    <h6 class="grey-text">Produzido por Fábrica de Softwares Jr.</h6>
-                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script>
 
         function deletar(id) {
 
-            console.log(id);
+            console.log();
             swal({
-                title: 'Tem certeza?',
-                text: 'O Paciente será apagado ! (' + id + ')',
+                title: 'Tem certeza?', // Padrão
+                text: 'O Paciente será apagado !', // Padrão
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#00c853',
-                confirmButtonText: 'Sim',
-                cancelButtonColor: '#b71c1c',
-                cancelButtonText: 'Não'
+                confirmButtonColor: '#0c4',  // Padrão
+                confirmButtonText: 'Sim',    // Padrão
+                cancelButtonColor: '#b11',   // Padrão
+                cancelButtonText: 'Não'      // Padrão
 
             }).then(function (result) {
                 if (result.value) {

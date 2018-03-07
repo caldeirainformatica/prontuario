@@ -1,23 +1,17 @@
-{{--///**--}}
-{{--// * Created by PhpStorm.--}}
-{{--// * User: Antonio RS-PC--}}
-{{--// * Date: 06/07/2017--}}
-{{--// * Time: 11:52--}}
-{{--// */--}}
-
 @extends('templates/principal')
-@section('titulo', 'Cadastro de Aluno')
-
+@section('titulo', 'Triagem Programa')
 @section('conteudo')
+
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
+                    <div class="grey-text center-align">
                         <h4 class="grey-text" align="center">Triagem programa</h4>
                     </div>
                     <form method="post" action={{route('triagemPrograma.salvar')}}>
-                        {{ csrf_field() }}
+                    {{ csrf_field() }}
+                    <!-- TOKEN LARAVEL -->
                         <div class="row">
                             <div class="input-field col s6">
                                 <select name="fk_triagem">
@@ -45,10 +39,10 @@
             </div>
         </div>
     </div>
-<script>
-    $(document).ready(function () {
-    $('select').material_select();
-    });
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
 
     </script>
 

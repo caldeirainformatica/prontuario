@@ -1,10 +1,3 @@
-{{--/**--}}
-{{--* Created by PhpStorm.--}}
-{{--* User: Antonio RS-PC--}}
-{{--* Date: 06/07/2017--}}
-{{--* Time: 10:33--}}
-{{--*/--}}
-
 @extends('templates/principal')
 <!-- Adicionando Javascript -->
 @section('conteudo')
@@ -17,7 +10,8 @@
                     </div>
 
                     <form method="post" action={{route('composicaoFamiliar.salvar')}}>
-                        {{ csrf_field() }}
+                    {{ csrf_field() }}
+                    <!-- TOKEN DO LARAVEL -->
                         <div id="oculto">
                             <input type="number" name="id_composicao_familiar" id="id_composicao_familiar"
                                    value="{{$dados['id_composicao_familiar'] or null}}" hidden>

@@ -6,14 +6,14 @@
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Lista de Médicos/Alunos</h4>
+                    <div class="grey-text center-align">
+                        <h4>Lista de Médicos/Alunos</h4>
                     </div>
                     <table class="highlight bordered responsive-table">
                         <thead>
                         <tr>
                             <th>Ação</th>
-                            <th>Codigo</th>
+                            <th>Código</th>
                             <th>Nome</th>
                             <th>Fixo</th>
                             <th>Celular</th>
@@ -48,29 +48,27 @@
     <script>
         function deletar(id) {
 
-            console.log(id);
+            console.log();
             swal({
-                title: 'Tem Certeza que deseja apagar esse Aluno? (' + id + ")",
-                text: "O Aluno irá ser apagado!",
-                type: 'warning',
+                title: 'Tem Certeza? ', // TÍTULO DE AVISO
+                text: "O Aluno será apagado !", // SUBTÍTULO DE AVISO
+                type: 'warning',  // TIPO DE ÍCONE DE AVISO
                 showCancelButton: true,
-                confirmButtonColor: '#00c853', // COR DO BOTÃO DE CONFIRMAR
-                confirmButtonText: 'Sim',
-                cancelButtonColor: '#b71c1c',  // COR DO BOTÃO DE CANCELAR
-                cancelButtonText: 'Não'
+                confirmButtonColor: '#0c3', // COR DO BOTÃO DE CONFIRMAR
+                confirmButtonText: 'Sim',   // TÍTULO DO BOTÃO DE CONFIRMAR
+                cancelButtonColor: '#b11',  // COR DO BOTÃO DE CANCELAR
+                cancelButtonText: 'Não'     // TÍTULO DO BOTÃO DE CANCELAR
             }).then(function (result) {
                 if (result.value) {
                     window.open('/aluno/deletar/' + id, '_self');
                     swal(
-                        'Deletado!',
-                        'Apagado com sucesso !',
-                        'success'
+                        'Deletado!', 'Aluno deletado !', 'success'
+                        // #simbolo de exclusão    #mensagem      #tipo de ícone
                     )
                 } else if (result.dismiss === 'cancel') {
                     swal(
-                        'Operação Cancelada',
-                        'Cadastro salvo com sucesso',
-                        'error'
+                        'Operação Cancelada', 'warning', 'error'
+                        // #título   #subtítulo  # ícone
                     )
                 }
             })

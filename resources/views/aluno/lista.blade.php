@@ -6,8 +6,8 @@
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Lista de Médicos/Alunos</h4>
+                    <div class="grey-text center-align">
+                        <h4>Lista de Médicos/Alunos</h4>
                     </div>
                     <table class="striped bordered">
                         <thead>

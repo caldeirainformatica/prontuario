@@ -1,19 +1,13 @@
-<!--/**-->
-<!-- * Created by PhpStorm.-->
-<!-- * User: Antonio RS-PC-->
-<!-- * Date: 07/07/2017-->
-<!-- * Time: 10:50-->
-<!-- */-->
-
 @extends('templates/principal')
-<!-- Adicionando Javascript -->
+@section('titulo','Triagem Drugs')
 @section('conteudo')
+
     <div class="row">
         <div class="col s10 offset-s1">
             <div class="card">
                 <div class="card-content">
-                    <div>
-                        <h4 class="grey-text" align="center">Triagem de drogas</h4>
+                    <div class="grey-text center-align">
+                        <h4>Triagem de drogas</h4>
                     </div>
                     <form method="post" action={{route('triagemDrogas.salvar')}}>
                         <div class="input-field col s6">
@@ -35,8 +29,6 @@
                         <input type="submit" value="Salvar" id="salvar" align="center" name="salvar" onclick=""
                                class="btn btn-success">
                         <a href="{{route('triagemDrogas.index')}}" class="btn red">Cancelar</a>
-
-
                     </form>
                 </div>
             </div>

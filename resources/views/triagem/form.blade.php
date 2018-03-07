@@ -3,7 +3,7 @@
 
 @section('conteudo')
 
-    <div class="row" input fiel>
+    <div class="row" input field>
         <div class="col s12 l7">
 
 

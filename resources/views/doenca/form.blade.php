@@ -1,10 +1,3 @@
-{{--///**--}}
-{{--// * Created by PhpStorm.--}}
-{{--// * User: Antonio RS-PC--}}
-{{--// * Date: 06/07/2017--}}
-{{--// * Time: 11:52--}}
-{{--// */--}}
-
 @extends('templates/principal')
 @section('titulo', 'Cadastro de Aluno')
 
